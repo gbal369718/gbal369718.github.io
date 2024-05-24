@@ -3,101 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat UI</title>
+    <title>Bal Govind - Web Developer</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #1e1e1e;
-        }
-    </style>
 </head>
-<body class="flex justify-center items-center h-screen">
-    <div class="w-full max-w-4xl bg-gray-900 text-gray-200 rounded-lg overflow-hidden shadow-lg">
-        <div class="flex flex-col h-full">
-            <!-- Sidebar -->
-            <div class="flex flex-none bg-gray-800 p-4">
-                <div class="flex-grow">
-                    <input type="text" placeholder="Search" class="w-full bg-gray-700 text-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="bg-gray-800 py-4">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-bold">Bal Govind</h1>
+            <p class="mt-2 text-lg">Web Developer</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold">About Me</h2>
+            <p class="mt-4 text-gray-300">
+                Hello! I'm Bal Govind, a passionate web developer with experience in building responsive and interactive websites using modern technologies. I enjoy creating clean, efficient, and user-friendly websites that provide value to users.
+            </p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-12 bg-gray-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold">Projects</h2>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 1" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold">Project 1</h3>
+                    <p class="mt-2 text-gray-300">Description of project 1. This project showcases my skills in HTML, CSS, and JavaScript.</p>
                 </div>
-            </div>
-            <div class="flex flex-1 overflow-y-hidden">
-                <div class="w-1/4 bg-gray-800 overflow-y-auto">
-                    <ul>
-                        <li class="p-4 border-b border-gray-700">
-                            <span class="block font-semibold">ABNY Team 🛠️</span>
-                            <span class="text-sm text-gray-400">You: Ok bhaiya</span>
-                        </li>
-                        <li class="p-4 border-b border-gray-700">
-                            <span class="block font-semibold">Information</span>
-                            <span class="text-sm text-gray-400">Stephen Barabanki SVC: Thank you bhaiya</span>
-                        </li>
-                        <li class="p-4 border-b border-gray-700">
-                            <span class="block font-semibold">Dua Villa Folks ☕</span>
-                            <span class="text-sm text-gray-400">Samson Bhaiya: Cfl</span>
-                        </li>
-                        <li class="p-4 border-b border-gray-700">
-                            <span class="block font-semibold">Sandeep Bhaiya Abny</span>
-                            <span class="text-sm text-gray-400">FTT@.xlsx</span>
-                        </li>
-                        <li class="p-4 border-b border-gray-700">
-                            <span class="block font-semibold">2RSYP.G. college2ndsem(sociology)</span>
-                            <span class="text-sm text-gray-400">Bhupendra Singh: सूचना ===== सभी छात्र/छात्राएँ अपना प्रोजेक्ट भ...</span>
-                        </li>
-                        <li class="p-4 border-b border-gray-700">
-                            <span class="block font-semibold">EIC Videos/Graphics</span>
-                            <span class="text-sm text-gray-400">M@R!0: Sweet</span>
-                        </li>
-                        <li class="p-4 border-b border-gray-700">
-                            <span class="block font-semibold">WORK ABNY</span>
-                            <span class="text-sm text-gray-400">Sandeep: Bhaiya, I will be working on...</span>
-                        </li>
-                        <li class="p-4 border-b border-gray-700">
-                            <span class="block font-semibold">Prince Bhai SVC</span>
-                            <span class="text-sm text-gray-400">C: opened</span>
-                        </li>
-                        <li class="p-4 border-b border-gray-700">
-                            <span class="block font-semibold">Kundan Singh SVC</span>
-                        </li>
-                    </ul>
+                <!-- Project 2 -->
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 2" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold">Project 2</h3>
+                    <p class="mt-2 text-gray-300">Description of project 2. This project demonstrates my ability to create responsive layouts.</p>
                 </div>
-                <!-- Chat Section -->
-                <div class="flex flex-col flex-1 bg-gray-900">
-                    <div class="p-4 flex-none bg-gray-800 flex items-center">
-                        <span class="font-semibold">ABNY Team 🛠️</span>
-                    </div>
-                    <div class="flex-1 p-4 overflow-y-auto">
-                        <div class="flex flex-col space-y-4">
-                            <div class="flex">
-                                <div class="bg-gray-700 p-4 rounded-lg">
-                                    <p class="text-sm">Ashish John Bhaiya</p>
-                                    <p class="mt-2">Bal Govind Bhai please keep his details</p>
-                                </div>
-                            </div>
-                            <div class="flex">
-                                <div class="bg-gray-700 p-4 rounded-lg">
-                                    <p class="text-sm">Ashish John Bhaiya</p>
-                                    <p class="mt-2">mariokp.wixsite.com<br>https://mariokp.wixsite.com/mariopeter<br>Bhai please keep his projects on design' section</p>
-                                </div>
-                            </div>
-                            <div class="flex">
-                                <div class="bg-gray-700 p-4 rounded-lg">
-                                    <p class="text-sm">Ashish John Bhaiya</p>
-                                    <img src="https://via.placeholder.com/150" alt="Image" class="mt-2 rounded-lg">
-                                    <p class="mt-2">And keep these categories according to the pictures</p>
-                                    <p class="mt-2">maybe you can use Accordion or Tabs</p>
-                                </div>
-                            </div>
-                            <div class="flex justify-end">
-                                <img src="https://via.placeholder.com/150" alt="Image" class="rounded-lg">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex-none p-4 bg-gray-800">
-                        <input type="text" placeholder="Type a message" class="w-full bg-gray-700 text-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600">
-                    </div>
+                <!-- Project 3 -->
+                <div class="bg-gray-700 p-6 rounded-lg">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 3" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-semibold">Project 3</h3>
+                    <p class="mt-2 text-gray-300">Description of project 3. This project highlights my proficiency in backend development.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-semibold">Contact Me</h2>
+            <p class="mt-4 text-gray-300">Feel free to get in touch with me through the form below:</p>
+            <form action="#" method="POST" class="mt-8 max-w-lg mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-400">Name</label>
+                    <input type="text" id="name" name="name" class="w-full bg-gray-700 text-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-400">Email</label>
+                    <input type="email" id="email" name="email" class="w-full bg-gray-700 text-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-400">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full bg-gray-700 text-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-600"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-indigo-600 text-white rounded-lg px-4 py-2 hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">&copy; 2024 Bal Govind. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
