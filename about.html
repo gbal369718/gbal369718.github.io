@@ -1,46 +1,101 @@
-<!-- About Section -->
-<section id="about" class="py-12 bg-gray-900">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-semibold text-white mb-8">About Me</h2>
-    <div class="flex flex-col lg:flex-row gap-12">
-      <!-- Profile Image -->
-      <div class="lg:w-1/3">
-        <img src="https://via.placeholder.com/300x400" alt="Profile Picture" class="rounded-lg shadow-lg mx-auto lg:mx-0" />
-      </div>
-      <!-- Description -->
-      <div class="lg:w-2/3">
-        <p class="text-gray-400 leading-loose mb-6">
-          Hello! I'm Bal Govind, a passionate web developer with experience in building responsive and interactive websites using modern technologies. I enjoy creating clean, efficient, and user-friendly websites that provide value to users.
-        </p>
-        <!-- Skills -->
-        <div class="mb-6">
-          <h3 class="text-xl font-semibold text-white mb-4">Skills</h3>
-          <ul class="list-disc list-inside text-gray-400">
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>React.js</li>
-            <li>Node.js</li>
-            <!-- Add more skills as needed -->
-          </ul>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bal Govind - Web Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="icon" href="https://via.placeholder.com/32" type="image/png" />
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Bal Govind - Web Developer" />
+  <meta property="og:description" content="Hello! I'm Bal Govind, a passionate web developer with experience in building responsive and interactive websites using modern technologies." />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630" />
+  <meta property="og:url" content="https://yourwebsite.com" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    body {
+      background-color: #1e1e1e;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+  <!-- Header -->
+  <div class="bg-gray-800 pb-6 sm:pb-8 lg:pb-12">
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+      <header class="mb-8 flex items-center justify-between py-4 md:mb-12 md:py-8 xl:mb-16">
+        <!-- logo - start -->
+        <a href="/" class="inline-flex items-center gap-2.5 text-2xl font-bold text-white md:text-3xl" aria-label="logo">
+          <svg width="95" height="94" viewBox="0 0 95 94" class="h-auto w-6 text-indigo-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M96 0V47L48 94H0V47L48 0H96Z" />
+          </svg>
+          Bal Govind
+        </a>
+        <!-- logo - end -->
+
+        <!-- nav - start -->
+        <nav class="hidden gap-12 lg:flex">
+          <a href="index.html" class="text-lg font-semibold text-indigo-500">Home</a>
+          <a href="about.html" class="text-lg font-semibold text-gray-300 transition duration-100 hover:text-indigo-500 active:text-indigo-700">About</a>
+          <a href="#contact" class="text-lg font-semibold text-gray-300 transition duration-100 hover:text-indigo-500 active:text-indigo-700">Contact</a>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="py-12 bg-gray-900">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-semibold text-white mb-8">About Me</h2>
+      <div class="flex flex-col lg:flex-row gap-12">
+        <!-- Profile Image -->
+        <div class="lg:w-1/3">
+          <img src="https://via.placeholder.com/300x400" alt="Profile Picture" class="rounded-lg shadow-lg mx-auto lg:mx-0" />
         </div>
-        <!-- Experience -->
-        <div class="mb-6">
-          <h3 class="text-xl font-semibold text-white mb-4">Experience</h3>
-          <p class="text-gray-400 leading-loose">
-            I have worked on various projects ranging from personal portfolios to large-scale web applications. My experience includes front-end development, back-end development, and full-stack development.
+        <!-- Description -->
+        <div class="lg:w-2/3">
+          <p class="text-gray-400 leading-loose mb-6">
+            Hello! I'm Bal Govind, a passionate web developer with experience in building responsive and interactive websites using modern technologies. I enjoy creating clean, efficient, and user-friendly websites that provide value to users.
           </p>
-        </div>
-        <!-- Achievements -->
-        <div>
-          <h3 class="text-xl font-semibold text-white mb-4">Achievements</h3>
-          <p class="text-gray-400 leading-loose">
-            - Completed multiple web development courses<br>
-            - Developed and deployed several websites<br>
-            <!-- Add your achievements here -->
-          </p>
+          <!-- Skills -->
+          <div class="mb-6">
+            <h3 class="text-xl font-semibold text-white mb-4">Skills</h3>
+            <ul class="list-disc list-inside text-gray-400">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>React.js</li>
+              <li>Node.js</li>
+              <!-- Add more skills as needed -->
+            </ul>
+          </div>
+          <!-- Experience -->
+          <div class="mb-6">
+            <h3 class="text-xl font-semibold text-white mb-4">Experience</h3>
+            <p class="text-gray-400 leading-loose">
+              I have worked on various projects ranging from personal portfolios to large-scale web applications. My experience includes front-end development, back-end development, and full-stack development.
+            </p>
+          </div>
+          <!-- Achievements -->
+          <div>
+            <h3 class="text-xl font-semibold text-white mb-4">Achievements</h3>
+            <p class="text-gray-400 leading-loose">
+              - Completed multiple web development courses<br>
+              - Developed and deployed several websites<br>
+              <!-- Add your achievements here -->
+            </p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-4">
+    <div class="container mx-auto px-4 text-center">
+      <p class="text-gray-400">&copy; 2024 Bal Govind. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
