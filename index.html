@@ -1,154 +1,362 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bal Govind - Web Developer</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="icon" href="https://via.placeholder.com/32" type="image/png" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bal Govind - Web Developer</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="https://via.placeholder.com/32" type="image/png" />
 
-  <!-- Open Graph Tags -->
-  <meta property="og:title" content="Bal Govind - Web Developer" />
-  <meta property="og:description" content="Hello! I'm Bal Govind, a passionate web developer with experience in building responsive and interactive websites using modern technologies." />
-  <meta property="og:image" content="https://via.placeholder.com/1200x630" />
-  <meta property="og:url" content="https://yourwebsite.com" />
-  <meta property="og:type" content="website" />
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Bal Govind - Web Developer" />
+    <meta
+      property="og:description"
+      content="Hello! I'm Bal Govind, a passionate web developer with experience in building responsive and interactive websites using modern technologies."
+    />
+    <meta property="og:image" content="https://via.placeholder.com/1200x630" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:type" content="website" />
 
-  <style>
-    body {
-      background-color: #1e1e1e;
-    }
-  </style>
-</head>
-<body class="bg-gray-900 text-white">
-  <!-- Header -->
-  <div class="bg-gray-800 pb-6 sm:pb-8 lg:pb-12">
-    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
-      <header class="mb-8 flex items-center justify-between py-4 md:mb-12 md:py-8 xl:mb-16">
-        <!-- logo - start -->
-        <a href="/" class="inline-flex items-center gap-2.5 text-2xl font-bold text-white md:text-3xl" aria-label="logo">
-          <svg width="95" height="94" viewBox="0 0 95 94" class="h-auto w-6 text-indigo-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M96 0V47L48 94H0V47L48 0H96Z" />
-          </svg>
-          Bal Govind
-        </a>
-        <!-- logo - end -->
+    <style>
+      body {
+        background-color: #1e1e1e;
+      }
 
-        <!-- nav - start -->
-<!--         <nav class="hidden gap-12 lg:flex">
-          <a href="#" class="text-lg font-semibold text-indigo-500">Home</a>
-          <a href="#about" class="text-lg font-semibold text-gray-300 transition duration-100 hover:text-indigo-500 active:text-indigo-700">About</a>
-          <a href="#contact" class="text-lg font-semibold text-gray-300 transition duration-100 hover:text-indigo-500 active:text-indigo-700">Contact</a>
-        </nav> -->
+      /* Custom styles for the hamburger menu */
+      .hamburger-bar {
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
 
-        <nav class="hidden gap-12 lg:flex">
-    <a href="index.html" class="text-lg font-semibold text-indigo-500">Home</a>
-    <a href="about.html" class="text-lg font-semibold text-gray-300 transition duration-100 hover:text-indigo-500 active:text-indigo-700">About</a>
-    <a href="#contact" class="text-lg font-semibold text-gray-300 transition duration-100 hover:text-indigo-500 active:text-indigo-700">Contact</a>
-</nav>
-        <!-- nav - end -->
+      .hamburger-open #bar1 {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
 
-        <!-- buttons - start -->
-        <a href="tel:+1234567890" class="hidden rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:text-indigo-700 md:text-base lg:inline-block">Call Now</a>
+      .hamburger-open #bar2 {
+        opacity: 0;
+      }
 
-        <button type="button" class="inline-flex items-center gap-2 rounded-lg bg-gray-700 px-2.5 py-2 text-sm font-semibold text-gray-300 ring-indigo-300 hover:bg-gray-600 focus-visible:ring active:text-gray-400 md:text-base lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
-          </svg>
-          Menu
-        </button>
-        <!-- buttons - end -->
-      </header>
+      .hamburger-open #bar3 {
+        transform: rotate(-45deg) translate(5px, -5px);
+      }
 
-      <section class="flex flex-col justify-between gap-6 sm:gap-10 md:gap-16 lg:flex-row">
-        <!-- content - start -->
-        <div class="flex flex-col justify-center sm:text-center lg:py-12 lg:text-left xl:w-5/12 xl:py-24">
-          <p class="mb-4 font-semibold text-indigo-500 md:mb-6 md:text-lg xl:text-xl">Welcome to My Portfolio</p>
+      .menu-slide {
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%);
+      }
 
-          <h1 class="mb-8 text-4xl font-bold text-white sm:text-5xl md:mb-12 md:text-6xl">Crafting Beautiful and Functional Websites</h1>
+      .menu-open {
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <div class="bg-gray-800 pb-6 sm:pb-8 lg:pb-12">
+      <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <header
+          class="mb-8 flex items-center justify-between py-4 md:mb-12 md:py-8 xl:mb-16"
+        >
+          <!-- logo - start -->
+          <a
+            href="/"
+            class="inline-flex items-center gap-2.5 text-2xl font-bold text-white md:text-3xl"
+            aria-label="logo"
+          >
+            <svg
+              width="95"
+              height="94"
+              viewBox="0 0 95 94"
+              class="h-auto w-6 text-indigo-500"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M96 0V47L48 94H0V47L48 0H96Z" />
+            </svg>
+            Bal Govind
+          </a>
+          <!-- logo - end -->
 
-          <p class="mb-8 leading-relaxed text-gray-400 md:mb-12 lg:w-4/5 xl:text-lg">I specialize in creating stunning, responsive websites that offer a seamless user experience. Let's build something amazing together.</p>
+          <!-- nav - start -->
+          <nav class="hidden gap-12 lg:flex">
+            <a href="index.html" class="text-lg font-semibold text-indigo-500"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-lg font-semibold text-gray-300 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+              >About</a
+            >
+            <a
+              href="#contact"
+              class="text-lg font-semibold text-gray-300 transition duration-100 hover:text-indigo-500 active:text-indigo-700"
+              >Contact</a
+            >
+          </nav>
+          <!-- nav - end -->
 
-          <div class="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start">
-            <a href="#projects" class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">View Projects</a>
+          <!-- buttons - start -->
+          <a
+            href="tel:+1234567890"
+            class="hidden rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:text-indigo-700 md:text-base lg:inline-block"
+            >Call Now</a
+          >
 
-            <a href="#contact" class="inline-block rounded-lg bg-gray-700 px-8 py-3 text-center text-sm font-semibold text-gray-300 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-600 focus-visible:ring active:text-gray-400 md:text-base">Get in Touch</a>
+          <!-- Hamburger Button for Mobile -->
+          <button
+            id="menu-button"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            class="inline-flex items-center gap-2 rounded-lg bg-gray-700 px-2.5 py-2 text-sm font-semibold text-gray-300 ring-indigo-300 hover:bg-gray-600 focus-visible:ring active:text-gray-400 md:hidden"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                id="bar1"
+                class="hamburger-bar"
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              />
+              <path
+                id="bar2"
+                class="hamburger-bar"
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              />
+              <path
+                id="bar3"
+                class="hamburger-bar"
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Menu
+          </button>
+          <!-- buttons - end -->
+        </header>
+
+        <!-- Mobile Menu -->
+        <ul
+          id="mobile-menu"
+          class="fixed top-0 left-0 w-full bg-gray-800 shadow-md md:hidden menu-slide"
+        >
+          <li>
+            <a href="index.html" class="block p-4 text-white hover:bg-gray-700"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="about.html" class="block p-4 text-white hover:bg-gray-700"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="block p-4 text-white hover:bg-gray-700"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <section
+          class="flex flex-col justify-between gap-6 sm:gap-10 md:gap-16 lg:flex-row"
+        >
+          <!-- content - start -->
+          <div
+            class="flex flex-col justify-center sm:text-center lg:py-12 lg:text-left xl:w-5/12 xl:py-24"
+          >
+            <p
+              class="mb-4 font-semibold text-indigo-500 md:mb-6 md:text-lg xl:text-xl"
+            >
+              Welcome to My Portfolio
+            </p>
+
+            <h1
+              class="mb-8 text-4xl font-bold text-white sm:text-5xl md:mb-12 md:text-6xl"
+            >
+              Crafting Beautiful and Functional Websites
+            </h1>
+
+            <p
+              class="mb-8 leading-relaxed text-gray-400 md:mb-12 lg:w-4/5 xl:text-lg"
+            >
+              I specialize in creating stunning, responsive websites that offer
+              a seamless user experience. Let's build something amazing
+              together.
+            </p>
+
+            <div
+              class="flex flex-col gap-2.5 sm:flex-row sm:justify-center lg:justify-start"
+            >
+              <a
+                href="#projects"
+                class="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base"
+                >View Projects</a
+              >
+
+              <a
+                href="#contact"
+                class="inline-block rounded-lg bg-gray-700 px-8 py-3 text-center text-sm font-semibold text-gray-300 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-600 focus-visible:ring active:text-gray-400 md:text-base"
+                >Get in Touch</a
+              >
+            </div>
           </div>
-        </div>
-        <!-- content - end -->
+          <!-- content - end -->
 
-        <!-- image - start -->
-        <div class="h-48 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:h-auto xl:w-5/12">
-          <img src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000" loading="lazy" alt="Photo by Fakurian Design" class="h-full w-full object-cover object-center" />
-        </div>
-        <!-- image - end -->
-      </section>
-    </div>
-  </div>
-
-  <!-- About Section -->
-  <section id="about" class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-semibold">About Me</h2>
-      <p class="mt-4 leading-loose text-gray-300">Hello! I'm Bal Govind, a passionate web developer with experience in building responsive and interactive websites using modern technologies. I enjoy creating clean, efficient, and user-friendly websites that provide value to users.</p>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="bg-gray-800 py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-semibold">Projects</h2>
-      <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <!-- Project 1 -->
-        <div class="rounded-lg bg-gray-700 p-6">
-          <img src="https://via.placeholder.com/300x200" alt="Project 1" class="mb-4 rounded-lg" />
-          <h3 class="text-xl font-semibold">Portfolio Website</h3>
-          <p class="mt-2 text-gray-300">A responsive portfolio website built with HTML, CSS, and JavaScript, showcasing my personal projects and skills.</p>
-        </div>
-        <!-- Project 2 -->
-        <div class="rounded-lg bg-gray-700 p-6">
-          <img src="https://via.placeholder.com/300x200" alt="Project 2" class="mb-4 rounded-lg" />
-          <h3 class="text-xl font-semibold">E-commerce Platform</h3>
-          <p class="mt-2 text-gray-300">An e-commerce platform with dynamic product listings, a shopping cart, and user authentication, built using React and Node.js.</p>
-        </div>
-        <!-- Project 3 -->
-        <div class="rounded-lg bg-gray-700 p-6">
-          <img src="https://via.placeholder.com/300x200" alt="Project 3" class="mb-4 rounded-lg" />
-          <h3 class="text-xl font-semibold">Blog Application</h3>
-          <p class="mt-2 text-gray-300">A full-featured blog application with a content management system, built using Django and Bootstrap.</p>
-        </div>
+          <!-- image - start -->
+          <div
+            class="h-48 overflow-hidden rounded-lg bg-gray-100 shadow-lg lg:h-auto xl:w-5/12"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&q=75&fit=crop&w=1000"
+              loading="lazy"
+              alt="Photo by Fakurian Design"
+              class="h-full w-full object-cover object-center"
+            />
+          </div>
+          <!-- image - end -->
+        </section>
       </div>
     </div>
-  </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-semibold">Contact Me</h2>
-      <p class="mt-4 text-gray-300">Feel free to get in touch with me through the form below:</p>
-      <form action="#" method="POST" class="mx-auto mt-8 max-w-lg">
-        <div class="mb-4">
-          <label for="name" class="block text-gray-400">Name</label>
-          <input type="text" id="name" name="name" class="w-full rounded-lg bg-gray-700 px-4 py-2 text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600" />
-        </div>
-        <div class="mb-4">
-          <label for="email" class="block text-gray-400">Email</label>
-          <input type="email" id="email" name="email" class="w-full rounded-lg bg-gray-700 px-4 py-2 text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600" />
-        </div>
-        <div class="mb-4">
-          <label for="message" class="block text-gray-400">Message</label>
-          <textarea id="message" name="message" rows="4" class="w-full rounded-lg bg-gray-700 px-4 py-2 text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600"></textarea>
-        </div>
-        <button type="submit" class="w-full rounded-lg bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600">Send Message</button>
-      </form>
-    </div>
-  </section>
+    <!-- About Section -->
+    <section id="about" class="py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-semibold">About Me</h2>
+        <p class="mt-4 leading-loose text-gray-300">
+          Hello! I'm Bal Govind, a passionate web developer with experience in
+          building responsive and interactive websites using modern
+          technologies. I enjoy creating clean, efficient, and user-friendly
+          websites that provide value to users.
+        </p>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 py-4">
-    <div class="container mx-auto px-4 text-center">
-      <p class="text-gray-400">&copy; 2024 Bal Govind. All rights reserved.</p>
-    </div>
-  </footer>
-</body>
+    <!-- Projects Section -->
+    <section id="projects" class="bg-gray-800 py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-semibold">Projects</h2>
+        <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Project 1 -->
+          <div class="rounded-lg bg-gray-700 p-6">
+            <img
+              src="https://via.placeholder.com/300x200"
+              alt="Project 1"
+              class="mb-4 rounded-lg"
+            />
+            <h3 class="text-xl font-semibold">Portfolio Website</h3>
+            <p class="mt-2 text-gray-300">
+              A responsive portfolio website built with HTML, CSS, and
+              JavaScript, showcasing my personal projects and skills.
+            </p>
+          </div>
+          <!-- Project 2 -->
+          <div class="rounded-lg bg-gray-700 p-6">
+            <img
+              src="https://via.placeholder.com/300x200"
+              alt="Project 2"
+              class="mb-4 rounded-lg"
+            />
+            <h3 class="text-xl font-semibold">E-commerce Platform</h3>
+            <p class="mt-2 text-gray-300">
+              An e-commerce platform with dynamic product listings, a shopping
+              cart, and user authentication, built using React and Node.js.
+            </p>
+          </div>
+          <!-- Project 3 -->
+          <div class="rounded-lg bg-gray-700 p-6">
+            <img
+              src="https://via.placeholder.com/300x200"
+              alt="Project 3"
+              class="mb-4 rounded-lg"
+            />
+            <h3 class="text-xl font-semibold">Blog Application</h3>
+            <p class="mt-2 text-gray-300">
+              A full-featured blog application with a content management system,
+              built using Django and Bootstrap.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-semibold">Contact Me</h2>
+        <p class="mt-4 text-gray-300">
+          Feel free to get in touch with me through the form below:
+        </p>
+        <form action="#" method="POST" class="mx-auto mt-8 max-w-lg">
+          <div class="mb-4">
+            <label for="name" class="block text-gray-400">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="w-full rounded-lg bg-gray-700 px-4 py-2 text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-gray-400">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full rounded-lg bg-gray-700 px-4 py-2 text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+            />
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-gray-400">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              class="w-full rounded-lg bg-gray-700 px-4 py-2 text-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full rounded-lg bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-4">
+      <div class="container mx-auto px-4 text-center">
+        <p class="text-gray-400">
+          &copy; 2024 Bal Govind. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- JavaScript for menu toggle -->
+    <script>
+      document
+        .getElementById("menu-button")
+        .addEventListener("click", function () {
+          var menu = document.getElementById("mobile-menu");
+          var button = this;
+          menu.classList.toggle("menu-open");
+          button.classList.toggle("hamburger-open");
+          button.setAttribute(
+            "aria-expanded",
+            menu.classList.contains("menu-open")
+          );
+        });
+    </script>
+  </body>
 </html>
